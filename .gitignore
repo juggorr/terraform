@@ -1,0 +1,6 @@
+*.pem
+*.ppk
+*sshkey*
+*.terraform
+*.hcl
+*tfstate*
