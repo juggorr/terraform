@@ -1,3 +1,3 @@
 variable "tgw-poc-bgp-asn" {
-  default = "64512"
+  default = "64520"
 }

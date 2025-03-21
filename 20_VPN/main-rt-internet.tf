@@ -19,6 +19,8 @@ resource "aws_route" "rt-internet-route-2" {
   route_table_id = aws_route_table.rt_internet.id
   destination_cidr_block = "10.11.0.128/25"
   gateway_id = aws_ec2_transit_gateway.tgw-poc.id
+
+  depends_on = [aws_ec2_transit_gateway.tgw-poc]
 }
 
 #### Route Table Association ####

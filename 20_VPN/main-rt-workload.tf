@@ -12,6 +12,8 @@ resource "aws_route" "rt-workload-route-1" {
   route_table_id = aws_route_table.rt_workload.id
   destination_cidr_block = "0.0.0.0/0"
   gateway_id = aws_ec2_transit_gateway.tgw-poc.id
+
+  depends_on = [aws_ec2_transit_gateway.tgw-poc]
 }
 
 #### Route Table Association ####
