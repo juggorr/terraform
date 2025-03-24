@@ -23,6 +23,12 @@ resource "aws_route" "rt-internet-route-2" {
   depends_on = [aws_ec2_transit_gateway.tgw-poc]
 }
 
+ resource "aws_route" "rt-internet-route-3" {
+   route_table_id = aws_route_table.rt_internet.id
+   destination_cidr_block = "10.3.0.0/24"
+   gateway_id = aws_ec2_transit_gateway.tgw-poc.id
+ }
+
 #### Route Table Association ####
 resource "aws_route_table_association" "rt-internet-rta-1" {
   route_table_id = aws_route_table.rt_internet.id
