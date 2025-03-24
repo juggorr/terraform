@@ -19,8 +19,8 @@ resource "aws_security_group_rule" "sg-ec2-ssh-i00" {
 
 resource "aws_security_group_rule" "sg-ec2-ssh-i01" {
   type = "ingress"
-  from_port = 0
-  to_port = 0
+  from_port = -1
+  to_port = -1
   protocol = "icmp"
   cidr_blocks = ["0.0.0.0/0"]
   security_group_id = aws_security_group.sg-ec2-ssh.id
