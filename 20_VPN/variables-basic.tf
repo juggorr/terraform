@@ -17,3 +17,7 @@ variable "az-2-number" {
 variable "my-pc-ip" {
   default = "165.243.5.20"
 }
+
+variable "ec2-ami" {
+  default = "ami-062cddb9d94dcf95d"
+}
