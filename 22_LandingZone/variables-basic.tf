@@ -3,5 +3,5 @@ variable "region" {
 }
 
 variable "peer-accounts" {
-    default = ["626635399924"]
+    default = ["626635399924", "941377129743",]
 }
